@@ -1,13 +1,8 @@
 import numpy as np
-import heapq
 import re
-import matplotlib.pyplot as plt
 from nltk.tokenize import RegexpTokenizer
-from keras.models import Sequential, load_model
-from keras.layers.core import Dense, Activation
-from keras.layers import LSTM
-from random import sample
-import pickle
+from keras.models import  load_model
+
 
 # path = './Memoirs of a Geisha by Arthur Golden.txt'
 path = './novel_medium.txt'

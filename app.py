@@ -1,5 +1,4 @@
-from flask import Flask, render_template, url_for, request, jsonify
-import numpy as np
+from flask import Flask, render_template,  request, jsonify
 
 import model
 import lstm

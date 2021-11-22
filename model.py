@@ -1,10 +1,6 @@
 # import required libraries and dependencies
-import os
-import re
-import csv
+
 import string
-from collections import Counter
-import numpy as np
 import pandas as pd
 
 # read text corpus from the file
