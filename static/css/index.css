@@ -7,11 +7,12 @@ h1 {
 html {
     font-size: 18px;
 }
-
 body {
-    background-image: url("../../MicrosoftTeams-image.png");
+    background-size: cover;
 }
-
+h1 {
+    color: white;
+}
 #text-input {
     width: 60%;
     margin-bottom: 30px;
