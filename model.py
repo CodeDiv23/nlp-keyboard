@@ -150,7 +150,7 @@ class SpellChecker(object):
     # if edit distance doesn't return desired guesses return most probable words from dictionary
     if (len(guess_word_list) < 3):                                     
       index = 3 - len(guess_word_list)
-      valid_can_5 = set([w for w in self.vocabulary if w[0] == word[0]][:index])
+      valid_can_5 = set([w for w in self.vocabulary if str(w)[0] == word[0]][:index])
       guess_word_list += sorted([(w, self.likelihood[w]) for w in valid_can_5 if w not in valid_candidates], key = lambda tup : tup[1], reverse = True)
 
     top_guesses = [w[0] for w in guess_word_list]                               # top guesses from the guess words' list
@@ -161,7 +161,7 @@ class SpellChecker(object):
 
 spellchecker = SpellChecker()
 
-# check_string = 'hou wou doin joe divin throuh teh moon'
+# check_string = 'jpsdfykjnk'
 # check_string = check_string.lower()
 # check_list = check_string.split(sep=' ')
 

@@ -52,10 +52,16 @@ def predict_next(text):
 def predict(text):  
     articles = ['the', 'a', 'an']                                       # will be used when size of sentence < 3 words
     text = text.lower().split(' ')
+    text_f = []
+
+    for t in text:
+        if t in unique_words:
+            text_f.append(t)
+    text = text_f
     if (len(text) < 3): 
         text = articles[:(3-len(text))] + text 
 
     return tuple(predict_next(' '.join(text[-3:])))
     
     
-print(predict("there"))
+print(predict("hey there mate how are you"))

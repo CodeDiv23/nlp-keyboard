@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/model", methods=['POST','GET'])
 def modeloutput():
-    ans=("hi,ho,hi")
+    ans=("hi,hey,hello")
     if request.method == "POST":
         qtc_data = request.get_json()
         sentence =qtc_data[0]['sentence']
@@ -16,7 +16,8 @@ def modeloutput():
             word =lis[len(lis)-1]
             ans = model.spellchecker.check(word)
         else:
-            ans = lstm.predict(sentence[:-1])
+            sentence = sentence.strip()
+            ans = lstm.predict(sentence)
     print(ans)
     results = {'first': ans[0],'second': ans[1],'third':ans[2]}
     
